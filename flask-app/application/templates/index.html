@@ -1,20 +1,20 @@
 {% block body_content %}
 
-<h1> Fantasy Football! </h1>
+<h1> Student Enrollment </h1>
 
-{% for team_ in teams %}
-<p> Team ID: {{ team_.id }}</p>
-<p> Team Name: {{ team_.name }}</p>
+{% for class_ in classes %}
+<p> Class ID: {{ class_.id }}</p>
+<p> Class Name: {{ class_.name }}</p>
 
 
 {% endfor %}
 
-{% for player in players %}
+{% for student in students %}
 
-<p> Player ID: {{ player.id}}</p>
-<p> Player Name: {{ player.name }}</p>
-<p> Player position: {{ player.position }}</p>
-<p> Team ID: {{ player.fk_teamid }}</p>
+<p> Student ID: {{ student.id}}</p>
+<p> Student Name: {{ student.name }}</p>
+<p> Student Set: {{ student.set }}</p>
+<p> Class ID: {{ player.fk_classid }}</p>
 
 {% endfor %}
 
