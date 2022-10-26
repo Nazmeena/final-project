@@ -1,0 +1,21 @@
+{% block body_content %}
+
+<h1> Fantasy Football! </h1>
+
+{% for team_ in teams %}
+<p> Team ID: {{ team_.id }}</p>
+<p> Team Name: {{ team_.name }}</p>
+
+
+{% endfor %}
+
+{% for player in players %}
+
+<p> Player ID: {{ player.id}}</p>
+<p> Player Name: {{ player.name }}</p>
+<p> Player position: {{ player.position }}</p>
+<p> Team ID: {{ player.fk_teamid }}</p>
+
+{% endfor %}
+
+{% endblock body_content %}
