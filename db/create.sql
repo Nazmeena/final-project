@@ -1,11 +1,11 @@
-CREATE TABLE IF NOT EXISTS teams (
+CREATE TABLE IF NOT EXISTS classes (
         id INT PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(30) 
 );
-CREATE TABLE IF NOT EXISTS players (
+CREATE TABLE IF NOT EXISTS students (
         id INT PRIMARY KEY AUTO_INCREMENT, 
         name VARCHAR(30),
-        position VARCHAR(30),
-        fk_teamid INT, 
-        FOREIGN KEY (fk_teamid) REFERENCES teams(id)
+        set VARCHAR(30),
+        fk_classid INT, 
+        FOREIGN KEY (fk_classid) REFERENCES classes(id)
 );
