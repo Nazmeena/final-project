@@ -78,7 +78,7 @@ def updatestudent(id):
     if form.validate_on_submit():
         # What is put in the form gets ammended to the database
         name.name = form.name.data,
-        name.set = form.set.data,
+        name.set_ = form.set.data,
         name.fk_classid = form.fk_classid.data
         # Commit the changes
         db.session.commit()
@@ -88,7 +88,7 @@ def updatestudent(id):
     elif request.method == 'GET':
         # Update the form with whats in the database
         form.name.data = name.name 
-        form.set.data = name.set
+        form.set.data = name.set_
         form.fk_classid.data = name.fk_classid
     # If we go to the url return the template updateplayer.html
     return render_template('updatestudent.html', title='Update the student', form=form)
