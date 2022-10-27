@@ -97,8 +97,8 @@ def updatestudent(id):
 #DELETE class
 @app.route('/deleteclass/<int:id>')
 def deleteclass(id):
-    class = Classes.query.get(id)
-    db.session.delete(class)
+    Class = Classes.query.get(id)
+    db.session.delete(Class)
     db.session.commit()
     return redirect(url_for('index'))
 
