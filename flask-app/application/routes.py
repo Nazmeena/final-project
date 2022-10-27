@@ -38,7 +38,7 @@ def addstudent():
         # todos becomes what we are going to be adding to the database
         students = Students(
             name = form.name.data,
-            set = form.set.data,
+            set_ = form.set_.data,
             # Foreign key as a option to add to the create process. 
             fk_classid = form.fk_classid.data
         )
@@ -78,7 +78,7 @@ def updatestudent(id):
     if form.validate_on_submit():
         # What is put in the form gets ammended to the database
         name.name = form.name.data,
-        name.set_ = form.set.data,
+        name.set_ = form.set_.data,
         name.fk_classid = form.fk_classid.data
         # Commit the changes
         db.session.commit()
@@ -88,7 +88,7 @@ def updatestudent(id):
     elif request.method == 'GET':
         # Update the form with whats in the database
         form.name.data = name.name 
-        form.set.data = name.set_
+        form.set_.data = name.set_
         form.fk_classid.data = name.fk_classid
     # If we go to the url return the template updateplayer.html
     return render_template('updatestudent.html', title='Update the student', form=form)
