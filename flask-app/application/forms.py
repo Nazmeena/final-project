@@ -7,7 +7,7 @@ from application.models import Students, Classes
 
 class StudentForm(FlaskForm):
     name = StringField("Name")
-    set_ = StringField("Set")
+    position = StringField("Position")
     fk_classid = IntegerField("Class ID")
     submit = SubmitField("Submit")
 
