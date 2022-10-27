@@ -3,14 +3,14 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField, IntegerField
 
-from application.models import Players, Teams 
+from application.models import Students, Classes
 
-class PlayerForm(FlaskForm):
+class StudentForm(FlaskForm):
     name = StringField("Name")
     position = StringField("Position")
-    fk_teamid = IntegerField("Team ID")
+    fk_classid = IntegerField("Class ID")
     submit = SubmitField("Submit")
 
-class TeamForm(FlaskForm):
+class ClassForm(FlaskForm):
     name = StringField("Name")
     submit = SubmitField("Submit")
