@@ -8,5 +8,5 @@ class Classes(db.Model):
 class Students(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30))
-    position = db.Column(db.String(30))
+    course = db.Column(db.String(30))
     fk_classid = db.Column(db.Integer, db.ForeignKey('classes.id'))
